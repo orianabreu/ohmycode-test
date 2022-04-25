@@ -2,12 +2,14 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     * {
+        list-style: none;
         margin: 0;
         padding: 0;
-        list-style: none;
         text-decoration: none;
     }
     body {
+        background-color: hsl(235, 21%, 11%);
+        color: hsl(0, 0%, 98%);
         font-family: 'Josefin Sans', sans-serif;
     }
 `;
