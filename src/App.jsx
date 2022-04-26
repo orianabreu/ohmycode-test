@@ -10,7 +10,6 @@ function App() {
     <div>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <h1>Hola Mundo</h1>
         <TodosList />
       </ThemeProvider>
     </div>

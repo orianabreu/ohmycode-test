@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
 
-import ApiTodos from '../../components/ApiTodos/ApiTodos';
+import ApiTodos from "../../components/ApiTodos/ApiTodos";
+import Header from "../../components/Header/Header";
+import bgDark from "../../assets/images/bg-desktop-dark.jpg";
 
 export default function TodosList() {
-    
   return (
     <>
-        <ApiTodos />
+      <Header src={bgDark} />
+      <ApiTodos />
     </>
-  )
+  );
 }
