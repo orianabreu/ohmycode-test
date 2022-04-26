@@ -1,30 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import * as S from "./ApiTodos.styles";
+import Todo from "../Todo/Todo";
 
 export default function ApiTodos() {
-    const [todos, setTodos] = useState([]);
-    const baseURL = "https://jsonplaceholder.typicode.com/todos";
+  const [todos, setTodos] = useState([]);
+  const baseURL = "https://jsonplaceholder.typicode.com/todos";
 
-    useEffect(() => {
-        axios.get(baseURL)
-        .then(response => setTodos(response.data))
-        return () => {
-            
-        };
-    }, []);
+  useEffect(() => {
+    let mounted = true;
+
+    axios.get(baseURL).then((response) => {
+      if (mounted) {
+        setTodos(response.data);
+      }
+    });
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   return (
     <S.TodosContainer>
-        {todos.map((todo) => {
-            return (
-                <>
-                    <p>{todo.userId}</p>
-                    <p>{todo.title}</p>
-                    <p>{todo.completed ? "true" : "false"}</p>
-                </>
-            )
-        })}
+      {todos.map((todo) => {
+        return (
+          <Todo
+            userId={todo.userId}
+            title={todo.title}
+            completed={todo.completed}
+          />
+        );
+      })}
     </S.TodosContainer>
-  )
+  );
 }

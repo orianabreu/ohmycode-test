@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TodosContainer = styled.div`
-    width: 60%;
-    display: grid;
-    grid-template-columns: 10% auto 10%;
+    background-color: ${({theme}) => theme.palette.darkGreyDesaturated};
+    border-radius: 10px;
+    width: 50%;
 `;
