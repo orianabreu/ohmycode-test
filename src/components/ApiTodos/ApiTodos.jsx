@@ -25,8 +25,10 @@ export default function ApiTodos() {
   }, []);
 
   useEffect(() => {
-    axios.get(`${baseURL}?userId=${userId}`)
-    .then(response => setTodos(response.data))
+    if (userId >= 1) {
+      axios.get(`${baseURL}?userId=${userId}`)
+      .then(response => setTodos(response.data))
+    }
   }, [userId]);
 
   return (
