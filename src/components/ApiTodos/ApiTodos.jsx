@@ -24,6 +24,11 @@ export default function ApiTodos() {
 
   return (
     <S.TodosContainer>
+      <S.Legend>
+        <p>userID</p>
+        <p>Title</p>
+        <p className="completed">Completed</p>
+      </S.Legend>
       {todos.map((todo) => {
         return (
           <Todo
@@ -34,6 +39,9 @@ export default function ApiTodos() {
           />
         );
       })}
+      <S.GridFooter>
+        <p>Total todos: {todos.length}</p>
+      </S.GridFooter>
     </S.TodosContainer>
   );
 }

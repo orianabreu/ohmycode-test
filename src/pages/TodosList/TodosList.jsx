@@ -1,5 +1,6 @@
 import React from "react";
 
+import * as S from "./TodosList.styles";
 import ApiTodos from "../../components/ApiTodos/ApiTodos";
 import Header from "../../components/Header/Header";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
@@ -10,8 +11,10 @@ export default function TodosList() {
   return (
     <>
       <Header src={bgDark} />
-      <SectionTitle>Todo List</SectionTitle>
-      <UsersSelect />
+      <S.Wrapper>
+        <SectionTitle>Todo List</SectionTitle>
+        <UsersSelect />
+      </S.Wrapper>
       <ApiTodos />
     </>
   );

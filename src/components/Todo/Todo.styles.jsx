@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TodoBox = styled.div`
   display: grid;
-  grid-template-columns: 5% auto 5%;
+  grid-template-columns: 15% auto 10%;
   align-items: center;
   border-bottom: 0.3px solid ${({ theme }) => theme.palette.lightGrey};
   font-size: ${({ theme }) => theme.sizing.paragraph};
@@ -18,7 +18,7 @@ export const IconContainer = styled.div`
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  justify-self: end;
+  justify-self: center;
   align-items: center;
   height: 1.5rem;
   width: 1.5rem;
