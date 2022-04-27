@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import axios from "axios";
 
 import * as S from "./ApiTodos.styles";
@@ -6,6 +7,7 @@ import Todo from "../Todo/Todo";
 
 export default function ApiTodos() {
   const [todos, setTodos] = useState([]);
+  const { userId } = useSelector(state => state.userIdSelect);
   const baseURL = "https://jsonplaceholder.typicode.com/todos";
 
   useEffect(() => {
@@ -21,6 +23,11 @@ export default function ApiTodos() {
       mounted = false;
     };
   }, []);
+
+  useEffect(() => {
+    axios.get(`${baseURL}?userId=${userId}`)
+    .then(response => setTodos(response.data))
+  }, [userId]);
 
   return (
     <S.TodosContainer>

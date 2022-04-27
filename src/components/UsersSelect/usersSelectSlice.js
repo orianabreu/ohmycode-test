@@ -9,8 +9,6 @@ export const usersSelectSlice = createSlice({
   initialState,
   reducers: {
     UPDATE_SELECT_STATE: (state, action) => {
-      console.log(state);
-      console.log(action);
       state.userId = action.payload;
     },
   },
