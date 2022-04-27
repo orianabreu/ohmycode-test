@@ -27,6 +27,7 @@ export default function ApiTodos() {
       {todos.map((todo) => {
         return (
           <Todo
+            key={todo.id}
             userId={todo.userId}
             title={todo.title}
             completed={todo.completed}
