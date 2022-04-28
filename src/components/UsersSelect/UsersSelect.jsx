@@ -1,22 +1,14 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from 'react';
 
-import * as S from "./UsersSelect.styles";
-import { UPDATE_SELECT_STATE } from "./usersSelectSlice";
+import * as S from './UsersSelect.styles';
 
-export default function UsersSelect({ defaultValue }) {
-  const dispatch = useDispatch();
-  const { userId } = useSelector((state) => state);
-
+export default function UsersSelect({ defaultValue, handleChange }) {
   return (
     <>
       <S.Select
         name='userId'
-        value={userId}
         defaultValue={'default'}
-        onChange={(e) =>
-          dispatch(UPDATE_SELECT_STATE(e.target.value))
-        }>
+        onChange={handleChange}>
         <option value={'default'} disabled hidden>
           {defaultValue}
         </option>
