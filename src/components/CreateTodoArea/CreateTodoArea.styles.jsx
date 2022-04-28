@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Select } from "../UsersSelect/UsersSelect.styles";
+import { media } from "../../theme/theme";
 
 export const Form = styled.form`
   background-color: ${({ theme }) => theme.palette.darkGreyDesaturated};
@@ -11,6 +12,13 @@ export const Form = styled.form`
   margin-top: 1rem;
   padding: 0 1rem;
   width: 100%;
+
+  ${media.mobile} {
+    flex-direction: column;
+    height: 18rem;
+    padding: 1rem;
+  }
+
 `;
 
 export const Input = styled.input`
