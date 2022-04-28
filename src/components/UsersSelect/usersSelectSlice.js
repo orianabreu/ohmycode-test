@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  userId: "",
+  userId: '',
 };
 
 export const usersSelectSlice = createSlice({
-  name: "userIdSelect",
+  name: 'userIdSelect',
   initialState,
   reducers: {
     UPDATE_SELECT: (state, action) => {
@@ -16,4 +16,4 @@ export const usersSelectSlice = createSlice({
 
 export const { UPDATE_SELECT } = usersSelectSlice.actions;
 
-export default usersSelectSlice.reducer
+export default usersSelectSlice.reducer;

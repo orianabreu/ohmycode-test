@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Select } from "../UsersSelect/UsersSelect.styles";
-import { media } from "../../theme/theme";
+import styled from 'styled-components';
+import { Select } from '../UsersSelect/UsersSelect.styles';
+import { media } from '../../theme/theme';
 
 export const Form = styled.form`
   background-color: ${({ theme }) => theme.palette.darkGreyDesaturated};
@@ -18,14 +18,13 @@ export const Form = styled.form`
     height: 18rem;
     padding: 1rem;
   }
-
 `;
 
 export const Input = styled.input`
   border: none;
   border-radius: 10px;
   color: ${({ theme }) => theme.palette.purple};
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${({ theme }) => theme.sizing.paragraph};
   outline: none;
   opacity: 0.7;
@@ -34,7 +33,7 @@ export const Input = styled.input`
 `;
 
 export const CompletedTodoSelect = styled(Select)`
-    color: ${({ theme }) => theme.palette.purple};
+  color: ${({ theme }) => theme.palette.purple};
 `;
 
 export const AddButton = styled.button`

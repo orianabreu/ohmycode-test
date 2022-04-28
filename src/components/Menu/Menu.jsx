@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import * as S from "./Menu.styles";
+import * as S from './Menu.styles';
 
 export default function AppMenu() {
   return (
