@@ -13,7 +13,7 @@ export default function TodosList() {
       <Header src={bgDark} />
       <S.Wrapper>
         <SectionTitle>Todo List</SectionTitle>
-        <UsersSelect />
+        <UsersSelect defaultValue="Filter by userId"/>
       </S.Wrapper>
       <ApiTodos />
     </>
