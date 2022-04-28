@@ -28,8 +28,13 @@ export const createTodoAreaSlice = createSlice({
         completed: action.payload.completed
       }
       state.todos.push(newTodo);
-      console.log(action);
+      state.userId = '';
+      state.todoTitle = '';
+      state.todoCompleted = '';
     },
+    DELETE_TODO: (state, action) => {
+      state.todos = state.todos.filter(item => item.id !== action.payload)
+    }
   },
 });
 
@@ -38,6 +43,7 @@ export const {
   UPDATE_TODO_COMPLETED,
   UPDATE_SELECT_STATE,
   UPDATE_TODOS,
+  DELETE_TODO,
 } = createTodoAreaSlice.actions;
 
 export default createTodoAreaSlice.reducer;
