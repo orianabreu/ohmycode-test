@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import * as S from "./UsersSelect.styles";
 import { UPDATE_SELECT_STATE } from "./usersSelectSlice";
 
-export default function UsersSelect() {
+export default function UsersSelect({ defaultValue }) {
   const dispatch = useDispatch();
   const { userId } = useSelector((state) => state);
 
@@ -18,7 +18,7 @@ export default function UsersSelect() {
           dispatch(UPDATE_SELECT_STATE(e.target.value))
         }>
         <option value={'default'} disabled hidden>
-          Filter by userId
+          {defaultValue}
         </option>
         <option value='1'>1</option>
         <option value='2'>2</option>
