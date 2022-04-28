@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { media } from '../../theme/theme';
 
 export const TodoBox = styled.div`
   display: grid;
@@ -7,6 +8,11 @@ export const TodoBox = styled.div`
   border-bottom: 0.3px solid ${({ theme }) => theme.palette.lightGrey};
   font-size: ${({ theme }) => theme.sizing.paragraph};
   padding: 1rem 2rem;
+
+  ${media.mobile} {
+    grid-template-columns: 20% auto 20%;
+    padding: 1.3rem 1rem;
+  }
 `;
 
 export const IconContainer = styled.div`
