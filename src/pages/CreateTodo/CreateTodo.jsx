@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header';
 import bgLight from '../../assets/images/bg-desktop-light.jpg';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import CreateTodoArea from '../../components/CreateTodoArea/CreateTodoArea';
+import MyTodos from '../../components/MyTodos/MyTodos';
 
 export default function CreateTodo() {
   return (
@@ -14,6 +15,7 @@ export default function CreateTodo() {
             <SectionTitle>Create your todos</SectionTitle>
             <CreateTodoArea />
         </S.CreateAreaWrapper>
+        <MyTodos />
     </>
   )
 }

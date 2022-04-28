@@ -22,7 +22,7 @@ export const createTodoAreaSlice = createSlice({
     },
     UPDATE_TODOS: (state, action) => {
       const newTodo = {
-        id: Math.random() * 100,
+        id: Math.floor(Math.random() * 100),
         userId: action.payload.userId,
         title: action.payload.title,
         completed: action.payload.completed
