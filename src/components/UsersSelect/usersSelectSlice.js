@@ -8,12 +8,12 @@ export const usersSelectSlice = createSlice({
   name: "userIdSelect",
   initialState,
   reducers: {
-    UPDATE_SELECT_STATE: (state, action) => {
+    UPDATE_SELECT: (state, action) => {
       state.userId = action.payload;
     },
   },
 });
 
-export const { UPDATE_SELECT_STATE } = usersSelectSlice.actions;
+export const { UPDATE_SELECT } = usersSelectSlice.actions;
 
 export default usersSelectSlice.reducer
