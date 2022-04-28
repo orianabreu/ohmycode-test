@@ -4,7 +4,7 @@ import { TodoBox } from "../Todo/Todo.styles";
 export const TodosContainer = styled.div`
   background-color: ${({ theme }) => theme.palette.darkGreyDesaturated};
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   width: 60%;
 `;
 
